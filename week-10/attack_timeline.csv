@@ -1,0 +1,4 @@
+Timestamp,Source IP,Event Type,Action,Description
+2026-04-30 10:15:00 UTC,198.51.100.44,Web Server,Initial Access,POST /api/upload - Malicious payload executed by external attacker
+2026-04-30 10:25:00 UTC,10.0.5.15,Windows Security,Lateral Movement,Event ID 4624 - Successful Logon - User escalated to Domain Admin
+2026-04-30 10:45:00 UTC,10.0.5.15,Firewall,Exfiltration,Anomalous outbound 4.5 GB transferred over port 443 to 198.51.100.44

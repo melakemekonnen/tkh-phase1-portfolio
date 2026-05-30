@@ -1,0 +1,14 @@
+==================================================
+SESSION 16: READINESS INVENTORY
+==================================================
+Operator: Melakee
+Date: April 16, 2026
+Confidence Audit (Yes/No):
+1. Nmap (Network Scanning): [Yes]
+2. Docker (Containerization): [Yes]
+3. Linux Hardening (UFW/chmod): [Yes]
+4. VS Code Remote-SSH: [Yes]
+Identify your weakest area and your plan to review it:
+My weakest area is Nmap. I struggle when I encounter errors that I don’t understand during network scanning.
+To improve, I plan to review Nmap documentation and practice identifying open ports on test machines this week.
+==================================================

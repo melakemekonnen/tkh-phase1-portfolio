@@ -1,0 +1,25 @@
+=== TASK 1: Subnet Remediation ===
+
+default via 192.168.10.1 dev dummy0 
+default via 192.168.64.1 dev enp0s1 proto dhcp src 192.168.64.3 metric 100 
+192.168.10.0/24 dev dummy0 proto kernel scope link src 192.168.10.193 
+192.168.10.0/24 dev enp0s1 proto kernel scope link src 192.168.10.150 
+192.168.64.0/24 dev enp0s1 proto kernel scope link src 192.168.64.3 metric 100 
+
+=== TASK 2: DNS Fix ===
+127.0.0.1 localhost
+127.0.1.1 melakee-QEMU-Virtual-Machine
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+
+192.168.10.193  secure.titancorp.com
+
+=== TASK 3: TCP 3-Way Handshake Proof ===
+12:56:11.674905 IP 192.168.10.193.53130 > 192.168.10.193.80: Flags [S], seq 3731053610, win 65495, options [mss 65495,sackOK,TS val 908618604 ecr 0,nop,wscale 9], length 0
+12:56:11.675177 IP 192.168.10.193.80 > 192.168.10.193.53130: Flags [S.], seq 3140383144, ack 3731053611, win 65483, options [mss 65495,sackOK,TS val 908618605 ecr 908618604,nop,wscale 9], length 0
+12:56:11.675209 IP 192.168.10.193.53130 > 192.168.10.193.80: Flags [.], ack 1, win 128, options [nop,nop,TS val 908618605 ecr 908618605], length 0
